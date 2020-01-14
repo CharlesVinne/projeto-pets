@@ -12,4 +12,13 @@ def cadastro(request):
     if form.is_valid():
         form.save()
         args['msg'] = 'Cadastro Realizado com sucesso'
+        
+
+
     return render(request, 'cadastro.html', args)
+
+def lista_gatinhos(request):
+    lista_gatinhos = Dono.objects.filter().all()
+    args = {'lista_gatinhos':lista_gatinhos}
+    return render(request, 'listagatinhos.html', args)
+
