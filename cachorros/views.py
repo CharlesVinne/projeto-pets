@@ -14,4 +14,4 @@ def cadastro(request):
         
 
 
-    return render(request, 'cadastro.html', args)
+    return render(request, 'cadastro_cachorro.html', args)
